@@ -30,6 +30,7 @@ import android.graphics.Point;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -116,7 +117,7 @@ public class MultiShrinkScroller extends FrameLayout {
     private boolean isBeingDragged = false;
     private boolean receivedDown = false;
     private boolean isFullscreenDownwardsFling = false;
-    private ScrollView scrollView;
+    private NestedScrollView scrollView;
     private View scrollViewChild;
     private View toolbar;
     private ImageView photoView;
@@ -297,7 +298,7 @@ public class MultiShrinkScroller extends FrameLayout {
      * This method must be called inside the Activity's onCreate. Initialize everything.
      */
     public void initialize(MultiShrinkScrollerListener listener, boolean isOpenContactSquare) {
-        scrollView = (ScrollView) findViewById(R.id.content_scroller);
+        scrollView = (NestedScrollView) findViewById(R.id.content_scroller);
         scrollViewChild = findViewById(R.id.content_container);
         toolbar = findViewById(R.id.toolbar_parent);
         photoViewContainer = findViewById(R.id.toolbar_parent);

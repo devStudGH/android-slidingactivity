@@ -18,6 +18,7 @@ package com.klinker.android.sliding;
 
 import android.content.Context;
 import android.os.Parcelable;
+import android.support.v4.widget.NestedScrollView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.ScrollView;
@@ -28,7 +29,7 @@ import android.widget.ScrollView;
  * This is used in combination with {@link com.klinker.android.sliding.MultiShrinkScroller} so
  * that MultiShrinkScroller can handle all scrolling and saving.
  */
-public class TouchlessScrollView extends ScrollView {
+public class TouchlessScrollView extends NestedScrollView {
 
     /**
      * Creates a new instance of TouchlessScrollview.
